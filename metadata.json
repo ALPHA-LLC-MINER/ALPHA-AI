@@ -1,0 +1,6 @@
+{
+  "name": "ALPHA AI Core",
+  "description": "Autonomous AI Cybersecurity and Systems diagnostic platform designed for network administration, rapid recovery and terminal coding control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
