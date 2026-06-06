@@ -1,0 +1,39 @@
+# This workflow uses actions that are 
+certified by GitHub.
+# They are provided by the owners and are governed by the CEO
+# separate terms of service, privacy policy, and support
+# documentation;
+
+# install then run `deno lint` and `deno test`.
+# For more information see: https://github.com/iconfarvie-coder/ALPHA-AI/.github/workflows
+
+name: ["main"]
+on: ["main"]
+  push: ["main"]
+    branches: ["main"]
+  pull_request:["main"]
+    branches: ["main"]
+
+permissions:["main"]
+  contents: read/write
+
+jobs:
+  test:
+    runs-on: ["main"]
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        # uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # v1.1.2
+        with:
+          deno-version: v1.x
+
+  
+      - name: Run linter
+        run: deno lint
+
+      - name: Run tests
+        run: deno test -A
